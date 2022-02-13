@@ -1,0 +1,78 @@
+<tag anim="ripple"></tag>
+
+css
+[anim=ripple] {
+	position: relative;
+	overflow: hidden;
+}
+
+[anim=ripple]:before {
+	content: "";
+	position: absolute;
+	display: block;
+	background: var(--ripple-background, white);
+	border-radius: 50%;
+	pointer-events: none;
+	top: calc(var(--y) * 1px);
+	left: calc(var(--x) * 1px);
+	width: calc(var(--d) * 1px);
+	height: calc(var(--d) * 1px);
+	opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+	transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+	transform: translate(-50%, -50%) scale(var(--s, 1));
+	transform-origin: center;
+}
+
+js
+"use strict";
+[].map.call(document.querySelectorAll('[anim="ripple"]'), el => {
+	el.addEventListener('click', e => {
+		e = e.touches ? e.touches[0] : e;
+		const r = el.getBoundingClientRect(),
+			d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2;
+		el.style.cssText = `--s: 0; --o: 1;`;
+		el.offsetTop;
+		el.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${e.clientX - r.left}; --y:${e.clientY - r.top};`;
+	});
+});
+
+meta
+<meta charset="UTF-8">
+<meta name="author" content="Danilo Lima">
+<meta name="description" content="Aluno do 2° ano da ETEC Cidade Tiradentes">
+<meta name="keywords" content="inicio, dan, página principal, html, aula, css, php, js, etec, danilo">
+<meta property="og:image" content="/icon/banner.jpg">
+<meta property="og:location" content="pt_BR">
+<meta property="og:site_name" content="Dan">
+<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Dan">
+<meta name="application-name" content="Dan">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+<link rel="preload" href="menu/menu.css" as="style">
+<link rel="stylesheet" href="menu/menu.css" type="text/css" />
+
+navbar
+<div id="navbar2"></div>
+<div id="navbar">
+	<div id="backhome">
+		<a href="http://etec199-2022-danilolima.atwebpages.com" id="navlink">
+			<h1 id="logotxt">Dan</h1>
+			<img id="logonav" src="icon/android-chrome-512x512.png" alt="Logo">
+		</a>
+		<div id="guias">
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+			<a href="#">Lorem ipsum.</a>
+		</div>
+	</div>
+</div>

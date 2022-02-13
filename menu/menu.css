@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap');
+
+:root {
+	--navheight: 5.5em;
+}
+
+/* Global */
+body {
+	background: no-repeat fixed center/100% url('bg.jpg');
+	margin: 0;
+	padding: 0;
+}
+
+div.container {
+	background-color: #0001;
+	width: 1080px;
+	height: 1920px;
+	margin: 0 auto;
+	margin-top: 100px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+* {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Pagina */
+div.info {
+	float: left;
+	margin-left: 40px;
+	margin-top: 70px;
+	width: 550px;
+	min-height: 100px;
+	animation: 1.5s aparecer .5s ease-out both;
+}
+
+div.infol {
+	width: 35em;
+	float: right;
+	margin-right: 5%;
+}
+
+div.infol h1 {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 4em;
+}
+
+h1.titulo {
+	text-decoration: underline;
+	font-size: 40px;
+}
+
+div.infol h2 {
+	margin-top: 1.6em;
+}
+
+#infop,
+div.info p {
+	font-size: 1.3em
+}
+
+/* Imagenes */
+div.logo {
+	width: 350px;
+	height: 350px;
+	margin-left: 70px;
+	display: block;
+	float: left;
+}
+
+div.logoerror {
+	width: 350px;
+	height: 350px;
+	margin-right: 70px;
+	float: right;
+}
+
+div.logo img {
+	height: 350px;
+	width: 350px;
+	margin-top: 70px;
+	position: relative;
+	animation: 3.3s imgOpac 5.2s ease-in-out both;
+}
+
+div.logoerror img {
+	height: 100%;
+	width: 100%;
+	animation: 1.5s aparecer .7s ease-in-out both;
+}
+
+div.logo svg.logoback {
+	position: absolute;
+	margin-top: 70px;
+}
+
+div.logo svg.logomeio {
+	position: absolute;
+	margin-top: 70px;
+}
+
+svg.logoback path {
+	fill-opacity: 0;
+	stroke: red;
+	stroke-width: 22em;
+	stroke-dasharray: 7500;
+	stroke-linecap: square;
+	animation: 6s stroke 0.5s ease-in-out both,
+		25s strokeColor 8s ease-in infinite;
+}
+
+/* Navbar */
+#navbar {
+	background: #331c1c;
+	height: 90px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	left: 0;
+	box-shadow: 0 0 .5em #000;
+	z-index: 39;
+}
+
+#navbar2 {
+	background: #dbd7d7;
+	height: 100px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	left: 0;
+	text-align: center;
+	box-shadow: 0 0 1.4em #000;
+	z-index: 38;
+}
+
+div#guias a {
+	margin-left: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+	border-radius: 8px;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 2.5px solid #333;
+	background: rgba(0, 0, 0, .3);
+	backdrop-filter: blur(1.5px);
+	transition: .2s ease-in;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+[anim=ripple] {
+	position: relative;
+	overflow: hidden;
+}
+
+[anim=ripple]:before {
+	content: "";
+	position: absolute;
+	display: block;
+	background: var(--ripple-background, white);
+	border-radius: 50%;
+	pointer-events: none;
+	top: calc(var(--y) * 1px);
+	left: calc(var(--x) * 1px);
+	width: calc(var(--d) * 1px);
+	height: calc(var(--d) * 1px);
+	opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+	transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+	transform: translate(-50%, -50%) scale(var(--s, 1));
+	transform-origin: center;
+}
+
+
+div#guias a:last-child {
+	margin-right: .5em;
+}
+
+#backhome {
+	margin: 0;
+	padding: 0;
+	width: 80px;
+	height: 80px;
+	background: transparent;
+}
+
+#logotxt {
+	font-family: 'Poppins', sans-serif;
+	margin-left: 25px;
+	top: 0;
+	position: absolute;
+	transition: .3s ease-out;
+	background: transparent;
+}
+
+img#logonav {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	margin-left: 25px;
+	margin-top: 5px;
+	background: #fff;
+	padding: 5px;
+	left: -100px;
+	border-radius: 10px;
+	transition: .3s ease-out;
+}
+
+#guias {
+	background: #dbd7d7;
+	margin-right: 5%;
+	margin-top: 19px;
+	padding: 0.25em 0;
+	height: 1.8em;
+	max-width: 65%;
+	position: absolute;
+	right: 0;
+	font-size: 1.6em;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	border-radius: 9px;
+	box-shadow: inset 0 0 .18em #000;
+}
+
+::-webkit-scrollbar {
+	background: #fff5;
+	height: 7px;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #000;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+#mao {
+	width: 0;
+	height: 0;
+	visibility: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Animations */
+@keyframes imgOpac {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes stroke {
+	0% {
+		stroke-opacity: 0;
+		stroke-dashoffset: 7500;
+	}
+
+	15.3% {
+		stroke-dashoffset: 7500;
+		stroke-opacity: 1;
+	}
+
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes strokeColor {
+	0% {
+		stroke: red;
+	}
+
+	20% {
+		stroke: yellow;
+	}
+
+	40% {
+		stroke: #0f0;
+	}
+
+	60% {
+		stroke: #04f;
+	}
+
+	80% {
+		stroke: #507;
+	}
+
+	100% {
+		stroke: red;
+	}
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+		margin-top: 100px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 20px;
+	}
+}
+
+/* Media cueri */
+@media(max-width: 786px) {
+	body {
+		background: no-repeat fixed center url('bg.jpg');
+	}
+
+	div.container {
+		width: 100%;
+		height: 100%;
+		margin-top: calc(var(--navheight) + 1.4em);
+	}
+
+	h1:not(#logotxt) {
+		font-size: 4em;
+	}
+
+	div.logo,
+	div.logo img,
+	div.logo svg.logoback,
+	div.logo svg.logomeio {
+		width: auto;
+		margin-left: 1em;
+		margin-top: .2em;
+		transform: scale(0.85);
+	}
+
+	svg.logoback path {
+		stroke-linecap: round;
+	}
+
+	div.info {
+		width: 80%;
+		margin: 10%;
+		animation: 1.5s aparecer .5s ease-in-out both;
+	}
+
+	div.logoerror img {
+		transform: scale(0.9);
+		float: none;
+		animation: 1.5s aparecer .3s ease-in-out both;
+	}
+
+	div.logoerror {
+		margin-right: 25px;
+		margin-left: 50%;
+	}
+
+	div.infol {
+		width: 80%;
+		margin: 10%;
+		margin-top: 0;
+	}
+
+	div.infol h1 {
+		margin: 0;
+		margin-top: .3em;
+		transform: scale(1.2);
+	}
+
+	div.infol h2 {
+		font-size: 1.5em;
+		margin-top: 5px;
+	}
+
+	#navbar {
+		height: var(--navheight);
+	}
+
+	#navbar2 {
+		height: calc(var(--navheight) + 1.5%);
+	}
+
+	#logotxt {
+		transition: 1s ease-in-out;
+		opacity: 1;
+		border-bottom: 2px solid transparent;
+		border-top: 2px solid transparent;
+		margin-top: 15px;
+		font-weight: 100;
+	}
+
+	#logotxt:hover {
+		transform: scale(1.1);
+		border-bottom: 2px solid #fff;
+		border-top: 2px solid #fff;
+	}
+
+	#logonav {
+		visibility: hidden;
+	}
+
+	div#guias {
+		margin-top: .55em;
+		padding-top: .3em;
+		padding-bottom: .18em;
+	}
+
+	div#guias a {
+		margin-bottom: -0.6em;
+	}
+
+	::-webkit-scrollbar,
+	::-webkit-scrollbar-thumb {
+		visibility: hidden;
+	}
+
+	#mao {
+		height: initial;
+		width: initial;
+		visibility: visible;
+		position: fixed;
+		transform: scale(.1);
+		top: -450px;
+		left: -50px;
+		animation: 6s mao 5s both infinite;
+		z-index: 40;
+	}
+
+	@keyframes mao {
+		0% {
+			opacity: 0;
+			left: -50px;
+		}
+
+		10% {
+			opacity: 1;
+			left: -50px;
+		}
+
+		90% {
+			opacity: 1;
+			left: -250px;
+		}
+
+		100% {
+			opacity: 0;
+			left: -250px;
+		}
+	}
+}
