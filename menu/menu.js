@@ -47,10 +47,10 @@ if (!document.cookie) {
 
 /* mobile maozinha */
 mao = document.getElementById('mao');
-let biscoito = getCookie("pvisita");
-if (biscoito == 1) {
+let pvisita = getCookie("pvisita");
+if (pvisita == 1) {
 	mao.style.visibility = 'hidden';
-} else if (biscoito == 0) {
+} else if (pvisita == 0) {
 	mao.style.visibility = 'visible';
 }
 
