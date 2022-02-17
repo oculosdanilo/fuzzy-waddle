@@ -1,0 +1,18 @@
+@import url("bootstrap.min.css");
+
+nav {
+    background-color: black;
+    color: white;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid rgb(209, 0, 0);
+}
+
+.navbar-brand {
+    border-radius: .4em;
+}
+
+.navbar-brand:hover {
+    border: 1px solid rgb(209, 0, 0);
+}
