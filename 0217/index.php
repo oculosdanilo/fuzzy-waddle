@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PHP 1</title>
-<meta name="author" content="Danilo Lima">
+    <meta name="author" content="Danilo Lima">
 <meta name="description" content="Minha primeira aula de PHP!">
 <meta name="keywords" content="pho, html, css, aula, etec">
 <meta property="og:image" content="../icon/banner.jpg">
@@ -21,7 +20,7 @@
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="../menu/menu.css">
-
+    <title>PHP 2</title>
     <style>
         p {
             background-color: #000;
@@ -37,7 +36,7 @@
         }
     </style>
 </head>
-<div class="container">
+<body>
 <div id="navbar2"></div>
 	<div id="navbar">
 		<div id="backhome">
@@ -47,18 +46,22 @@
 			</a>
 			<div id="guias">
 				<span>
-                    <a href="#" anim="ripple">PHP I</a>
-                    <a href="../0217/index.php" anim="ripple">PHP II</a>
+					<a href="../0216/index.php" anim="ripple">PHP I</a>
+					<a href="../0217/index.php" anim="ripple">PHP II</a>
 			</div>
 		</div>
-	</div>
+    </div>
+    <div class="container">
     <?php
-    $nome = "<p align='center'> Meu nome é Danilo e eu estou aprendendo PHP!!!</p>";
-    echo $nome;
 
-    $n1 = 1;
-    $n2 = 3;
-    echo "<p align='center'>", $n1 + $n2, "</p>";
+    $nome = "aluno Danilo carvalho lima";
+    echo "<p align='center'>", strlen($nome), "</p>";
+    echo "<p align='center'>", ucwords($nome), "</p>";
+    echo "<p align='center'>", strtolower($nome), "</p>";
+    echo "<p align='center'>", strtoupper($nome), "</p>";
+    echo "<p align='center'>", str_replace('linguagem', 'amo', $nome), "</p>";
+    echo "<p align='center'>", substr($nome, l, s), "</p>";
+
     ?>
     </div>
     <script src="../menu/menu.js"></script>
