@@ -23,7 +23,20 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="preload" href="../menu/menu.css" as="style">
 	<link rel="stylesheet" href="../menu/menu.css" type="text/css" />
+	<style>
+		p {
+            background-color: #000;
+            font-size: 2em;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            margin-top: .4em;
+        }
 
+        div.container {
+            background-color: #0002;
+        }
+	</style>
 </head>
 
 <body>
@@ -42,6 +55,24 @@
 					<a href="#" anim="ripple">PHP IV</a>
 			</div>
 		</div>
+	</div>
+	<div class="container">
+		<?php
+		$string = "nome";
+		$int = 23;
+		$bool = true;
+		$doub = 3.14;
+		$arr = ["nome", 23, true];
+		$obj = new stdClass;
+		$obj->string = "nome";
+		$obj->int = 23;
+		$vartype = array(gettype($string), gettype($int), gettype($bool), gettype($doub), gettype($arr), gettype($obj));
+		echo "<p>";
+		foreach ($vartype as $value) {
+			echo $value . ", ";
+		}
+		echo "</p>";
+		?>
 	</div>
 </body>
 
